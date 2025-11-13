@@ -27,3 +27,4 @@ dist-ssr
 !.env
 
 data/censo_arboreo.geojson
+/venv
