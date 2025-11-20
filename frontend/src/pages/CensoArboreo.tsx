@@ -25,7 +25,7 @@ import {
   Pie,
   Cell,
 } from "recharts";
-import { PageLoader } from "@/components";
+import { Badge, PageLoader } from "@/components";
 import { useBairros, useBairroStats, useTreeStats } from "@/hooks/use-geo-data";
 import {
   Diameter,
@@ -492,7 +492,11 @@ export default function CensoArboreo() {
                           )
                         }
                       >
-                        <TableCell className="font-medium">{idx + 1}</TableCell>
+                        <TableCell className="font-medium">
+                          <Badge variant={idx === 0 ? "default" : "secondary"}>
+                            {idx + 1}
+                          </Badge>
+                        </TableCell>
                         <TableCell>{bairro.bairro}</TableCell>
                         <TableCell className="text-right">
                           {bairro.quantidade.toLocaleString()}
